@@ -8,5 +8,5 @@ RUN sage -pip install jupyterlab
 # Copy the contents of the repo in ${HOME}
 COPY --chown=sage:sage . ${HOME}
 
-RUN echo dir
+RUN dir
 #RUN sage -pip install /Scripts/solve_for_x/solve_for_x/dist/solve_for_x-0.0-py3-none-any.whl
