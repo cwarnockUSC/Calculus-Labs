@@ -3,8 +3,9 @@
 
 FROM sagemath/sagemath:9.0-py3
 
-RUN sage -pip install jupyterlab
-RUN sage -pip install uofsc_calculus_labs
-
 # Copy the contents of the repo in ${HOME}
 COPY --chown=sage:sage . ${HOME}
+
+# Install this package and dependencies
+RUN sage -pip install .
+RUN sage -pip uofsc_calculus_labs
