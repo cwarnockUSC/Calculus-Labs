@@ -10,5 +10,4 @@ COPY --chown=sage:sage . ${HOME}
 
 # Install this package and dependencies
 RUN sage -pip install uofsc_calculus_labs
-RUN sage -pip install -U notebook-as-pdf
-RUN sage -pip install -U pyppeteer
+RUN sage -pip install pandoc
