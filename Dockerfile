@@ -3,7 +3,7 @@
 
 # Information on using Sage in Binder can be found here: https://github.com/sagemath/sage/tree/develop/docker
 #FROM sagemath/sagemath:9.1-py3
-RUN -it sagemath/sagemath:latest
+FROM sagemath/sagemath:latest
 
 # Copy the contents of the repo in ${HOME}
 COPY --chown=sage:sage . ${HOME}
